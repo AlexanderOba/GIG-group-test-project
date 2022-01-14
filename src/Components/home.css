@@ -16,10 +16,11 @@
     background-color: hsl(0, 0%, 98%);
 }
 .hmepgbdywrap{
-    padding: 35px 62px 100px;
+    padding: 35px 62px 500px;
 }
 .hmpginputwrap{
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     margin-bottom: 25px;
 }
@@ -129,4 +130,23 @@
 }
 .homepgrow{
     justify-content: center;
+}
+@media(max-width: 760px){
+.navbarwraper{   
+   padding: 23px 15px;
+   align-items: baseline;
+}
+.hmepgbdywrap{
+    padding: 35px 0px 350px;
+}
+.searchinput {
+    width: 100%;
+    margin-bottom: 22px;
+}
+.sercinptdiv{
+    width: 100%;
+}
+.card-img {
+    height: 212px;
+}
 }

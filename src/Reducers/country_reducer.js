@@ -11,16 +11,9 @@ export const countryReducer = (state = initialState, action) =>{
                ...state,
                countries: action.payload
             };
-       }
-       switch (action.type){
-        case ActionTypes.SELECTED_REGION:
-        return {
-            ...state,
-            countries: action.payload
-         };
-        default:
-        return state;
-    }
+            default:
+            return state;
+        }
 }
 
 export const selectedCountryReducer = (state = {}, action) =>{

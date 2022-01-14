@@ -6,12 +6,11 @@ import Form from "react-bootstrap/Form";
 import NavBar from "./NavBar";
 import {useDispatch, useSelector} from "react-redux";
 import { setCountries } from "../Actions/country_actions"
-import { setCountryRegion } from "../Actions/country_actions"
 import ListOfCountries from "./ListOfCountries";
 
 
 const Home = () => {
-const countries = useSelector( (state) => state); 
+const countries = useSelector( (state) => state.countryReducer.countries); 
 
 const dispatch = useDispatch();
 const fetchCountries = async ()=> {
@@ -31,25 +30,44 @@ useEffect(()=>{
 console.log(countries)
 
 //filter countries by region
-const filterRegion = (region)=>{
-  console.log("i was clicked")
-  const result = countries.filter((selectedRegion)=>{
-   return selectedRegion.region === region;
-  })
-  dispatch (setCountryRegion(result))
+
+const filterRegion = async (region) =>{
+  console.log("i was clicked", region)
+  await axios.get(`https://restcountries.com/v3.1/region/${region}`)
+  .then((response)=>{
+    console.log(response.data)
+    dispatch (setCountries(response.data))
+  })  
+  .catch((err)=>{
+    console.log("err", err)
+  });
+  
+}
+//filter countries by fullname
+const filterCountryName = async (name) =>{
+  await axios.get(`https://restcountries.com/v3.1/name/${name}`)
+  .then((response)=>{
+    console.log(response.data)
+    dispatch (setCountries(response.data))
+  })  
+  .catch((err)=>{
+    console.log("err", err)
+  });
+  
 }
 
-
+console.log(countries)
   return (
     <>
       <NavBar />
       <Container fluid className="hmpgcontainer">
         <div className="hmepgbdywrap">
           <div className="hmpginputwrap">
-            <div>
+            <div className="sercinptdiv">
               <input
                 type="search"
                 className="searchinput"
+                onChange={(e) => filterCountryName( e.target.value)}
                 placeholder="Search for a country.."
               />
             </div>
@@ -59,22 +77,23 @@ const filterRegion = (region)=>{
                   as="select"
                   className=" form-control hmpginputselect"
                   name="Filter by Region"
+                  onChange={(e) => filterRegion( e.target.value)}
                 >
                   <option className="selectopt">Filter by Region</option>
-                  <option className="selectopt" value="Africa" onClick={()=>filterRegion('Africa')}>
+                  <option className="selectopt" value="Africa" onClick={()=>filterRegion("Africa")}>
                     Africa
                   </option>
-                  <option className="selectopt" value="Europe">
+                  <option className="selectopt" value="Europe" onClick={()=>filterRegion("Europe")}>
                     Europe
                   </option>
-                  <option className="selectopt" value="Asia">
+                  <option className="selectopt" value="Asia" onClick={()=>filterRegion("Asia")}>
                     Asia
                   </option>
-                  <option className="selectopt" value="North America">
-                    North America
+                  <option className="selectopt" value="Americas" onClick={()=>filterRegion("Americas")}>
+                    Americas
                   </option>
-                  <option className="selectopt" value="South America">
-                  South America
+                  <option className="selectopt" value="Oceania" onClick={()=>filterRegion("Oceania")}>
+                    Oceania
                   </option>
                 </Form.Control>
               </Form.Group>

@@ -9,12 +9,6 @@ export const setCountries = (countries) =>{
   }
 }
 
-export const setCountryRegion = (region) =>{
-  return {
-     type: ActionTypes.SELECTED_REGION,
-     payload: region
-  }
-}
 
 export const setCountryDetails = (country) =>{
   return {
