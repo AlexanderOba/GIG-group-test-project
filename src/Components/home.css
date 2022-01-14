@@ -107,10 +107,11 @@
 .bordercountriesbtn{
     border-radius: 2px;
     box-shadow: 0px 0px 8px rgb(0 0 0 / 16%);
-    padding: 4px 27px;
+    padding: 4px 22px;
     font-size: 14px;
     background-color: #ffffff;
     margin-left: 11px;
+    margin-bottom: 11px;
     display: inline-block;
 }
 .countrydetflag{
@@ -131,6 +132,15 @@
 .homepgrow{
     justify-content: center;
 }
+.bordercountrieswraper{
+    display: flex;
+    align-items: baseline;
+    flex-wrap: wrap;
+}
+.bordertitle{
+    font-size: 15px;
+    font-weight: 600px;
+}
 @media(max-width: 760px){
 .navbarwraper{   
    padding: 23px 15px;
@@ -148,5 +158,9 @@
 }
 .card-img {
     height: 212px;
+}
+.bordertitle{
+    font-size: 13px;
+    font-weight: 400px;
 }
 }

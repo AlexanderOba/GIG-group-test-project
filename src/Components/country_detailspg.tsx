@@ -37,10 +37,6 @@ const Country_details =(props) => {
   fetchCountryDetail()
  }, [])
 
-
-  console.log(country)
-
-  console.log(country?.country?.[0]?.name.nativeName.vie)
   console.log(country?.country?.[0].name.official) 
   return (
     <>
@@ -94,12 +90,14 @@ const Country_details =(props) => {
                   </div>
                 </div>
                 <div>
-                  <p className="card-details">
-                    Border Countries:{" "}
-                    <span className="bordercountriesbtn">France </span>{" "}
-                    <span className="bordercountriesbtn">Germany</span>{" "}
-                    <span className="bordercountriesbtn">Netherland</span>
-                  </p>
+                  <div className="card-details">
+                    <div className= "bordercountrieswraper">
+                      <div className="bordertitle">Border Countries:</div>
+                      <div className="bordercountriesbtn">France</div>
+                      <div className="bordercountriesbtn">Germany</div>
+                      <div className="bordercountriesbtn">Netherland</div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </Col>
