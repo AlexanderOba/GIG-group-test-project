@@ -1,3 +1,2 @@
-GIG interview test App is web application built with React version 16.8.3 Frontend App goes beyond usual html and css and provides you entire intuitive user experi ence and a development friendly coding approach.The application is built with client side Rendering with redux and typscript framworks
+GIG interview test App is web application built with React version 16.14.0, Typescript version3.9.7 and redux version 4.1.2. Frontend App goes beyond usual html and css and provides you entire intuitive user experience and a development friendly coding approach.
 
-Moreover, there are several versions of the Clarity frontend application, enhanced with different features.
