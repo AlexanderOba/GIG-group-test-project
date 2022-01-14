@@ -1,0 +1,132 @@
+.navbarwraper{
+    display: flex;
+    justify-content: space-between;
+    padding: 27px 78px;
+    border-bottom: 3px solid rgba(0,0,0,3%);
+}
+.navdiv1{
+    font-weight: 800;
+    font-size: 20px;
+}
+.navdiv2{
+    font-weight: 600;
+    font-size: 15px;
+}
+.hmpgcontainer{
+    background-color: hsl(0, 0%, 98%);
+}
+.hmepgbdywrap{
+    padding: 35px 62px 100px;
+}
+.hmpginputwrap{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 25px;
+}
+.searchinput{
+    border: 1px solid grey;
+    border-radius: 6px;
+    padding: 7px 20px 7px 51px;
+    background-image: url(../images/Search-icon.png);
+    background-position: 23px;
+    background-repeat: no-repeat;
+    background-size: 16px;
+    height: 60px;
+    width: 25rem;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 7%);
+    outline: none;
+    border: none;
+}
+.hmpginputselect{
+    height: 60px;
+    width: 16rem;
+    outline: none;
+    border: none;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 7%);
+}
+.country-card{
+    background-color: #ffffff;
+    border-radius: 7px;
+    width: 100%;
+    box-shadow: 0px 0px 10px rgb(0 0 0 / 7%);
+    margin-bottom: 40px;
+}
+.detail-wraper{
+    padding: 20px 13px 26px 19px;
+}
+.card-img{
+    height: 184px;
+    width: 100%;
+}
+.card-country{
+    font-weight: 800;
+     font-size: 15px;
+     margin-bottom: 16px;
+}
+.card-details{
+    font-weight: 600;
+    font-size: 13px;
+    margin-bottom: 5px;
+}
+.card-details>span{
+    font-weight: 400;
+}
+.countrysection{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.bckbtn{
+    border-radius: 7px;
+    box-shadow:0px 0px 7px rgb(0 0 0 / 31%);
+    padding: 0px 35px;
+    font-size: 15px;
+    background-color: #ffffff;
+    margin-bottom: 40px;
+    display: inline-block;
+}
+.bckbtn> span{
+   margin-right: 3px;
+   font-weight: 900;
+   font-size: 26px;
+}
+.contrypgdetailcontn{
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 55px;
+}
+.contryName{
+    font-weight: 800;
+    margin-bottom: 21px;
+    font-size: 23px;
+}
+.contrypgdetailcontndiv2{
+    width: 50%;
+}
+.bordercountriesbtn{
+    border-radius: 2px;
+    box-shadow: 0px 0px 8px rgb(0 0 0 / 16%);
+    padding: 4px 27px;
+    font-size: 14px;
+    background-color: #ffffff;
+    margin-left: 11px;
+    display: inline-block;
+}
+.countrydetflag{
+    background-color: hsl(0, 0%, 98%);
+    height: 350px;
+}
+.countrydetcol2wrap{
+    padding: 48px 0px 0px 36px;
+}
+.cntdetflag{
+    height: 246px;
+}
+.loadinwraper{
+    text-align: center;
+    font-weight: 600;
+    font-size: 18px;
+}
+.homepgrow{
+    justify-content: center;
+}
