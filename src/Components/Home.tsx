@@ -25,6 +25,7 @@ const fetchCountries = async ()=> {
   
 }
 useEffect(()=>{
+  window.scrollTo(-0, -0);
    fetchCountries();
 }, [])
 console.log(countries)

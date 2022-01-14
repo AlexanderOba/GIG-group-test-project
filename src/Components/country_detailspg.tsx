@@ -34,6 +34,7 @@ const Country_details =(props) => {
      })
   } 
  useEffect(()=>{
+    window.scrollTo(-0, -0);
   fetchCountryDetail()
  }, [])
 
@@ -93,9 +94,12 @@ const Country_details =(props) => {
                   <div className="card-details">
                     <div className= "bordercountrieswraper">
                       <div className="bordertitle">Border Countries:</div>
-                      <div className="bordercountriesbtn">France</div>
-                      <div className="bordercountriesbtn">Germany</div>
-                      <div className="bordercountriesbtn">Netherland</div>
+                      {country?.country?.[0]?.borders?.map((item, i)=>{
+                        return (
+                        <div className="bordercountriesbtn" key={i}>{item}</div>
+                        )
+                      })  
+                      }
                     </div>
                   </div>
                 </div>

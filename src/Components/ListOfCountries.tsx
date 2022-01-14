@@ -14,7 +14,7 @@ const ListOfCountries = () => {
           <Link to={`/country_details/${name.common}`}>
             <div className="country-card">
               <div className="card-img">
-                <img src={flags.png} className="img-fluid" alt="img" />
+                <img src={flags.png} className="cntlistimg-fluid" alt="img" />
               </div>
               <div className="detail-wraper">
                 <h6 className="card-country">{name.common}</h6>
